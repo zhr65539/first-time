@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>二维码生成</title>
+</head>
+<body>
+	<form action="qr.php" method="post">
+		生成网址:<br /><textarea id="text1" style="height:200px;width: 500px;" name="url"></textarea><br />
+		生成编号:<br /><textarea id="text2" style="height:200px;width: 500px;" name="name"></textarea><br />
+        容错率：
+		<select name="level">
+			<option value="L">低</option>
+			<option value="M">普通</option>
+			<option value="Q">中</option>
+			<option value="H" selected="selected">高</option>
+		</select><br />
+        二维码大小：
+        <select name="size">
+            <option value="3.3">200</option>
+            <option value="6.6" selected="selected">400</option>
+            <option value="9.9">600</option>
+        </select><br />
+		<input type="text" name="src" placeholder="请输入保存地址" style="padding:5px; margin: 5px;width: 500px;"/><br />
+		<input type="submit" value="生成" />
+	</form>
+</body>
+</html>
+<script src="js/jquery-1.12.0.min.js"></script>
+<script src="js/auto-line-number.js"></script>
+
+<script type="text/javascript">
+    $("#text1").setTextareaCount({
+        width: "30px",
+        bgColor: "#000000",
+        color: "#ffffff",
+        display: "inline-block"
+    });
+    $("#text2").setTextareaCount({
+        width: "30px",
+        bgColor: "#000000",
+        color: "#ffffff",
+        display: "inline-block"
+    });
+</script>
